@@ -82,13 +82,6 @@ nav a {
   text-align: center;
 }
 
-.weather h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .introduction h2,
 .weather h2 {
   background-color: var(--highlight-bg);
@@ -97,6 +90,10 @@ nav a {
   padding: 0.5rem;
   border-radius: 5px;
   margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .weather-info {
@@ -108,7 +105,7 @@ nav a {
 
 /* ========== ICONS ========== */
 .icon-small {
-  display: none; /* Oculto por padrão (desktop) */
+  display: none;
   width: 24px;
   height: 24px;
 }
@@ -128,7 +125,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ========== RESPONSIVO - MOBILE ========== */
+/* ========== MOBILE VERSION ========== */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -163,19 +160,11 @@ footer {
     padding: 1rem;
   }
 
-  .weather h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .icon-small {
-    display: inline-block; /* Mostra apenas no mobile, ao lado do texto */
-    margin-left: 0.5rem;
-    vertical-align: middle;
+    display: block;
   }
 
   .icon-large::after {
-    content: none; /* Remove o ícone grande no mobile */
+    content: none;
   }
 }
