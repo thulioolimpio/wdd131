@@ -82,6 +82,13 @@ nav a {
   text-align: center;
 }
 
+.weather h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .introduction h2,
 .weather h2 {
   background-color: var(--highlight-bg);
@@ -102,9 +109,8 @@ nav a {
 /* ========== ICONS ========== */
 .icon-small {
   display: none; /* Oculto por padrão (desktop) */
-  width: 40px;
-  height: auto;
-  margin-top: 1rem;
+  width: 24px;
+  height: 24px;
 }
 
 .icon-large::after {
@@ -124,21 +130,52 @@ footer {
 
 /* ========== RESPONSIVO - MOBILE ========== */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .hero {
+    min-height: 50vh;
+  }
+
   .overlay-content {
-    position: static;
+    position: relative;
+    top: auto;
+    left: auto;
     transform: none;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    gap: 1rem;
   }
 
   .introduction,
   .weather {
-    width: 100%;
-    margin-bottom: 1rem;
+    width: 90%;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+  }
+
+  .weather h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .icon-small {
-    display: block; /* Agora aparece apenas no mobile */
+    display: inline-block; /* Mostra apenas no mobile, ao lado do texto */
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .icon-large::after {
+    content: none; /* Remove o ícone grande no mobile */
   }
 }
