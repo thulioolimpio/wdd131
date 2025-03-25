@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brazil</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Brazil</h1>
+    <nav>
+      <a href="#intro">Intro</a>
+      <a href="#weather">Weather</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/tucano.webp" media="(min-width: 600px)">
+        <img src="images/tucano.webp" alt="Brazilian Landscape" />
+      </picture>
+      <div class="overlay-content">
+        <section id="intro" class="introduction">
+          <h2>Introduction</h2>
+          <p>Brazil is the largest country in South America, famous for its rich culture, the Amazon rainforest, beautiful beaches, and vibrant cities like Rio de Janeiro and São Paulo.</p>
+        </section>
+
+        <section id="weather" class="weather">
+          <h2>Weather <span class="icon-large"></span></h2>
+          <div class="weather-info">
+            <p>Temperature: <span id="temperature">25</span>°C</p>
+            <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+            <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+            <img src="images/1075473_cloud_sky_summer_sun_sunshine_icon.svg" alt="Weather Icon" class="icon-small" />
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Last Updated: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
