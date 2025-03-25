@@ -2,22 +2,24 @@
   --main-color: #ff0000;
   --accent-color: #008000;
   --background: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --text-light: #ffffff;
+  --text-dark: #333;
+  --highlight-bg: lightgray;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
+  padding: 0;
   background-color: var(--background);
-  color: #333;
+  color: var(--text-dark);
 }
 
+/* ========== HEADER ========== */
 header {
   background-color: var(--main-color);
-  color: white;
+  color: var(--text-light);
   padding: 1rem;
   text-align: center;
 }
@@ -28,17 +30,22 @@ h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-nav a {
-  margin: 0 1rem;
-  color: white;
-  text-decoration: none;
+nav {
+  margin-top: 0.5rem;
 }
 
+nav a {
+  margin: 0 1rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ========== HERO SECTION ========== */
 .hero {
   position: relative;
   width: 100%;
   min-height: 60vh;
-  height: auto;
 }
 
 .hero picture img {
@@ -48,59 +55,56 @@ nav a {
   display: block;
 }
 
+/* ========== OVERLAY CONTENT ========== */
 .overlay-content {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  height: 70%;
-  width: 70%;
+  flex-wrap: wrap;
+  width: 90%;
   max-width: 1000px;
+  gap: 2rem;
   z-index: 1;
 }
 
+/* ========== INTRO & WEATHER BOXES ========== */
 .introduction,
 .weather {
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: var(--overlay-bg);
+  color: var(--text-light);
   padding: 1.5rem;
   border-radius: 10px;
-  width: 40%;
+  flex: 1 1 300px;
+  min-width: 260px;
   text-align: center;
-}
-
-.introduction {
-  align-self: flex-start;
-}
-
-.weather {
-  align-self: flex-end;
 }
 
 .introduction h2,
 .weather h2 {
-  background: lightgray;
-  color: black;
+  background-color: var(--highlight-bg);
+  color: var(--text-dark);
   font-weight: bold;
   padding: 0.5rem;
   border-radius: 5px;
-  display: block;
-  width: 100%;
-  text-align: center;
+  margin-top: 0;
 }
 
 .weather-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
 }
 
+/* ========== ICONS ========== */
 .icon-small {
+  display: none; /* Oculto por padrão (desktop) */
   width: 40px;
   height: auto;
+  margin-top: 1rem;
 }
 
 .icon-large::after {
@@ -109,35 +113,32 @@ nav a {
   vertical-align: middle;
 }
 
+/* ========== FOOTER ========== */
 footer {
   background-color: var(--accent-color);
-  color: white;
+  color: var(--text-light);
   text-align: center;
   padding: 1rem;
+  font-size: 0.9rem;
 }
 
+/* ========== RESPONSIVO - MOBILE ========== */
 @media (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: unset;
-  }
-
   .overlay-content {
     position: static;
     transform: none;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: auto;
     padding: 1rem;
   }
 
   .introduction,
   .weather {
     width: 100%;
-    max-width: 500px;
     margin-bottom: 1rem;
-    padding: 1rem;
+  }
+
+  .icon-small {
+    display: block; /* Agora aparece apenas no mobile */
   }
 }
