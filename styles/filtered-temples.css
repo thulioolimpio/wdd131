@@ -1,15 +1,26 @@
+/* Updated with Google Fonts implementation */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    color: #333;
 }
 
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Rest of your existing CSS remains the same */
 header {
     background-color: #3b5998;
     color: white;
     padding: 15px;
     position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #menu-toggle {
@@ -22,7 +33,10 @@ header {
     right: 15px;
     cursor: pointer;
     display: block;
+    padding: 5px;
 }
+
+
 
 nav {
     display: none;
