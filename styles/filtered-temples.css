@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3b5998;
+    color: white;
+    padding: 15px;
+    position: relative;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: block;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background: #3b5998;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 150px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: left;
+}
+
+nav a:hover {
+    background: #2d4373;
+}
+
+nav a.active {
+    background: #2d4373;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.temple-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    position: relative;
+    height: 200px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temple-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.temple-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.temple-info h3 {
+    margin-top: 0;
+    color: #3b5998;
+}
+
+.temple-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: center;
+        background: none;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+    }
+    
+    nav a {
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
