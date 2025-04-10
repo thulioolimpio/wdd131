@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Review</title>
+    <link rel="stylesheet" href="styles/forms.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <main>
+        <div class="confirmation">
+            <p>We appreciate you taking the time to review our product. Your feedback helps us improve!</p>
+            <p>Total reviews submitted: <span id="reviewCounter">0</span></p>
+            <a href="index.html">Submit another review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Product Reviews | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/review.js"></script>
+    <script>
+        // Common footer content
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
