@@ -161,7 +161,7 @@ footer {
     color: var(--dark-color);
 }
 
-/* Responsive design */
+
 @media (max-width: 600px) {
     body {
         padding: 10px;
