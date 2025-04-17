@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Valley Hiking Club | Membros</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Green Valley Hiking Club</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trails.html">Trilhas</a></li>
+                <li><a href="membership.html" class="active">Membros</a></li>
+            </ul>
+            <div class="burger-menu">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="membership-benefits">
+            <h2>Junte-se ao Nosso Clube</h2>
+            <ul>
+                <li>Acesso a trilhas exclusivas</li>
+                <li>Descontos em equipamentos</li>
+                <li>Encontros mensais com especialistas</li>
+                <li>Comunidade de amantes da natureza</li>
+            </ul>
+        </section>
+
+        <section class="membership-form">
+            <h2>Formulário de Inscrição</h2>
+            <form id="membershipForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="level">Nível de Experiência:</label>
+                    <select id="level" name="level" required>
+                        <option value="">Selecione...</option>
+                        <option value="beginner">Iniciante</option>
+                        <option value="intermediate">Intermediário</option>
+                        <option value="advanced">Avançado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" checked>
+                        Desejo receber a newsletter mensal
+                    </label>
+                </div>
+                
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+            
+            <div id="confirmationMessage" class="hidden">
+                <p>Obrigado por se inscrever! Um e-mail de confirmação foi enviado.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Green Valley Hiking Club | <a href="references.html">Referências</a></p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
